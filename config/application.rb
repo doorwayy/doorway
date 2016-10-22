@@ -11,5 +11,6 @@ module Doorway
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    Dotenv.load "#{ENV['PWD']}/.env.#{Rails.env}" # load secrets from machine
   end
 end
