@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'dotenv', '~> 2.1'
 gem 'mysql2', '~> 0.4'
 gem 'annotate', '~> 2.7'
+gem 'responders', '~> 2.3'
 
 #default gems:
 

@@ -17,11 +17,11 @@ Shelter.where(name: %q[ALIVE (Alternatives to Living in a Violent Environment)])
     Location.where(
       description: %q[],
       address: Address.where(
-        line1: %q[PO Box 11201 63105],
+        line1: %q[PO Box 11201],
         line2: %q[],
         city: %q[],
         state: %q[],
-        postal_code: %q[],
+        postal_code: %q[63105],
         country: %q[USA],
       ).first_or_create!,
     ).first_or_create!.tap{|l| l.update!(
@@ -30,11 +30,11 @@ Shelter.where(name: %q[ALIVE (Alternatives to Living in a Violent Environment)])
     Location.where(
       description: %q[24-hour Crisis Hotline],
       address: Address.where(
-        line1: %q[PO Box 11201 63105],
+        line1: %q[PO Box 11201],
         line2: %q[],
         city: %q[],
         state: %q[],
-        postal_code: %q[],
+        postal_code: %q[63105],
         country: %q[USA],
       ).first_or_create!,
     ).first_or_create!.tap{|l| l.update!(

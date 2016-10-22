@@ -1,4 +1,5 @@
 class ApiController < ApplicationController
+
   ROOT_RESPONSE= {
     requestId: 'connection is good',
     likelihood: 'poor',
@@ -7,13 +8,6 @@ class ApiController < ApplicationController
   }
 
   def root
-    respond_to do |format|
-      format.json do
-        render json: ROOT_RESPONSE
-      end
-      format.html do
-        render json: {'Please add to URL:' => '?format=json'}
-      end
-    end
+    render json: ROOT_RESPONSE
   end
 end
