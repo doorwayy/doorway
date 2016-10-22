@@ -10,5 +10,11 @@
 #
 
 class Gender < ApplicationRecord
-  belongs_to :shelter
+  belongs_to :shelter, required: false
+
+  def self.method_missing *args, &block
+    (
+      args[0] && self.where(description: args[0].to_s).first
+    ) || super
+  end
 end

@@ -12,7 +12,11 @@
 #
 
 class Location < ApplicationRecord
-  belongs_to :address
-  belongs_to :shelter
-  has_many :phone_numbers
+  belongs_to :address, required: false
+  belongs_to :shelter, required: false
+  has_one :phone_number
+
+  def href= arg
+    raise 'Use the href on Shelter'
+  end
 end

@@ -10,5 +10,12 @@
 #
 
 class PhoneNumber < ApplicationRecord
-  belongs_to :location
+  belongs_to :location, required: false
+
+  validates_format_of :number, :with => /\A[+]1[.]\d{3}[.]\d{3}[.]\d{4}\z/
+
+  def pretty_number
+    groups= number.match(/(\d{1})[.](\d{3})[.](\d{3})[.](\d{4})/)
+    groups[1]+ '-'+ groups[2]+ '-'+ groups[3]+ '-'+ groups[4]
+  end
 end
