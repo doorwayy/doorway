@@ -78,23 +78,23 @@ Shelter.where(name: %q[BRIDGEWAY]).first_or_create!.update!(
   ],
 )
 
-#Shelter.where(name: %q[COVENANT HOUSE]).first_or_create!.update!(
-  #href: %q[http://www.covenanthouse.org/],
-  #description: %q[Various locations for teens in crisis. The Covenant House NINELINE (800-999-9999) is a free, confidential crisis hotline that operates 24 hours a day, 365 days a year. The Covenant House NINELINE is also available on the Internet at www.NINELINE.org where young people can submit questions via e-mail or participate in forums.],
-  #genders: [Gender.women],
-  #locations: [
-    #Location.where(
-      #description: %q[],
-      #address: Address.where(
-        #line1: %q[2727 N. Kingshighway],
-        #line2: %q[],
-        #city: %q[],
-        #state: %q[],
-        #postal_code: %q[63113],
-        #country: %q[USA],
-      #).first_or_create!,
-    #).first_or_create!.tap{|l| l.update!(
-      #phone_number: PhoneNumber.where(number: '+1.314.533.2451').first_or_create!
-    #)},
-  #],
-#)
+Shelter.where(name: %q[COVENANT HOUSE]).first_or_create!.update!(
+  href: %q[http://www.covenanthouse.org/],
+  description: %q[Various locations for teens in crisis. The Covenant House NINELINE (800-999-9999) is a free, confidential crisis hotline that operates 24 hours a day, 365 days a year. The Covenant House NINELINE is also available on the Internet at www.NINELINE.org where young people can submit questions via e-mail or participate in forums.],
+  genders: [Gender.women],
+  locations: [
+    Location.where(
+      description: %q[],
+      address: Address.where(
+        line1: %q[2727 N. Kingshighway],
+        line2: %q[],
+        city: %q[],
+        state: %q[],
+        postal_code: %q[63113],
+        country: %q[USA],
+      ).first_or_create!,
+    ).first_or_create!.tap{|l| l.update!(
+      phone_number: PhoneNumber.where(number: '+1.314.533.2451').first_or_create!
+    )},
+  ],
+)
