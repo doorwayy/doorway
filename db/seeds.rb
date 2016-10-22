@@ -44,4 +44,36 @@ Shelter.where(name: %q[ALIVE (Alternatives to Living in a Violent Environment)])
   ],
 )
 
-
+Shelter.where(name: %q[BRIDGEWAY]).first_or_create!.update!(
+  href: %q[http://www.bridgewaycounseling.com/],
+  description: %q[Bridgeway operates the only two emergency safe shelters and outreach centers in St. Charles and Lincoln Counties for women and children who are victims of domestic violence.],
+  genders: [Gender.women],
+  locations: [
+    Location.where(
+      description: %q[24-Hour Toll-Free Crisis Line],
+      address: Address.where(
+        line1: %q[St. Charles County - The Women’s Center in St. Charles],
+        line2: %q[],
+        city: %q[],
+        state: %q[],
+        postal_code: %q[],
+        country: %q[USA],
+      ).first_or_create!,
+    ).first_or_create!.tap{|l| l.update!(
+      phone_number: PhoneNumber.where(number: '+1.877.946.6854').first_or_create!
+    )},
+    Location.where(
+      description: %q[24-Hour Toll-Free Crisis Line],
+      address: Address.where(
+        line1: %q[Lincoln County - The Terry L. Robertson Center in Troy],
+        line2: %q[],
+        city: %q[],
+        state: %q[],
+        postal_code: %q[],
+        country: %q[USA],
+      ).first_or_create!,
+    ).first_or_create!.tap{|l| l.update!(
+      phone_number: PhoneNumber.where(number: '+1.877.462.1758').first_or_create!
+    )}
+  ],
+)
