@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022190301) do
+ActiveRecord::Schema.define(version: 20161022214133) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string   "line1",       limit: 191, default: "",    null: false
@@ -47,11 +47,11 @@ ActiveRecord::Schema.define(version: 20161022190301) do
   end
 
   create_table "shelters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
-    t.string   "name",        limit: 191, default: "", null: false
-    t.string   "href",        limit: 191, default: "", null: false
-    t.string   "description", limit: 191, default: "", null: false
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.string   "name",        limit: 191,  default: "", null: false
+    t.string   "href",        limit: 191,  default: "", null: false
+    t.string   "description", limit: 4096, default: "", null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
 end
