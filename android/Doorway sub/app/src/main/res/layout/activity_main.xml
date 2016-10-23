@@ -261,30 +261,41 @@
         </HorizontalScrollView>
         <!-- End ScrollView with buttons -->
 
-        <!-- Data Graph -->
-        <ImageView
-            android:id="@+id/graph"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <!-- End Data Graph -->
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Data Graph -->
+                <ImageView
+                    android:id="@+id/graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <!-- End Data Graph -->
 
 
-        <!-- Data Graph Summary in words-->
+                <!-- Data Graph Summary in words-->
 
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Open Cases: \n#c45645 Assited Housing  10/22/16 \n#6935 FoodStamp  10/21/16"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:gravity="center"
-            android:background="@drawable/roundedcorner"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundedcorner"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Open Cases: \n#c45645 Assited Housing  10/22/16 \n#6935 FoodStamp  10/21/16"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </LinearLayout>
+
+        </ScrollView>
 
 
         <ListView
