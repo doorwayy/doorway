@@ -1,0 +1,305 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_drawable1"
+    android:weightSum="1">
+
+    <!-- The Toolbar -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/backgroundtopbutton"
+        android:weightSum="1">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtn1"
+            android:layout_weight="0.17"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/menu2" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtn2"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="0.48"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@id/imgbtn1"
+            android:background="@drawable/door"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <ImageButton
+            android:background="@drawable/threedot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtn3"
+            android:layout_weight="0.48"
+            android:layout_gravity="right|center_vertical"
+            android:layout_alignTop="@id/imgbtn1"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <!-- End Toolbar -->
+
+    <!-- The other part of the screen -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Three buttons -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <!-- First of 3 buttons -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/emergencybutton"
+                android:padding="10dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/locationicon"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="30dp"
+                    />
+                <TextView
+                    android:id="@+id/txtclosest"
+                    android:textColor="@color/colorOurstextYellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:text="10 miles"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="10dp" />
+            </FrameLayout>
+            <!-- End of First of 3 buttons -->
+
+
+            <!-- Second of 3 buttons -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/emergencybutton"
+                    android:padding="10dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bedicon"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="30dp"
+                    />
+                <TextView
+                    android:id="@+id/txtBedsNum"
+                    android:textColor="@color/colorOurstextYellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:text="10 miles"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="10dp" />
+            </FrameLayout>
+            <!-- End of Second of 3 buttons -->
+
+
+
+            <!-- Third of 3 buttons -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/emergencybutton"
+                    android:padding="10dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/emergencysymbol"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="30dp"
+                    />
+                <TextView
+                    android:id="@+id/txtEmergency"
+                    android:textColor="@color/colorOurstextYellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:text="Emergency \nShelter"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="10dp" />
+            </FrameLayout>
+            <!-- End of Third of 3 buttons -->
+
+        </LinearLayout>
+        <!-- End Three buttons -->
+
+
+        <!-- ScrollView with buttons -->
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imgBtnFoodStamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selectorfoodstamp" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selectorsummery" />
+
+
+                <ImageButton
+                    android:id="@+id/imgBtnHousing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selectorhousing" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnJobBoard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selectorjobboard" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnJobTraining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selectorjobtraining" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnNewsFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selectornewsfeed" />
+
+
+
+                <ImageButton
+                    android:id="@+id/imgBtnUtility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selectorutility" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnHealthCare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selectorhealthcare" />
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+        <!-- End ScrollView with buttons -->
+
+        <!-- Data Graph -->
+        <ImageView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chart"/>
+        <!-- End Data Graph -->
+
+
+        <!-- Data Graph Summary in words-->
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Open Cases: \n#c45645 Assited Housing  10/22/16 \n#6935 FoodStamp  10/21/16"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center"
+            android:background="@drawable/roundedcorner"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <ListView
+            android:id="@+id/list_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <!-- End Data Graph Summary in words -->
+
+
+    </LinearLayout>
+
+    <!-- End The other part of the screen -->
+
+
+</LinearLayout>
