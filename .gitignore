@@ -62,3 +62,7 @@ warnings.txt
 .env.production
 .env.rack_env
 database.*.yml
+
+
+# android
+#local.properties
