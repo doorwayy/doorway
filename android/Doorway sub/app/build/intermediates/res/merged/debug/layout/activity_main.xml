@@ -265,8 +265,7 @@
         <ImageView
             android:id="@+id/graph"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/chart"/>
+            android:layout_height="wrap_content" />
         <!-- End Data Graph -->
 
 

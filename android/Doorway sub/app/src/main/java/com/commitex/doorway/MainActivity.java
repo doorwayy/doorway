@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ImageView imvDisplay = (ImageView) findViewById(R.id.graph);
+        imvDisplay.setImageDrawable(getResources().getDrawable(R.drawable.chart, getApplicationContext().getTheme()));
+
         /*
         responseView = (TextView) findViewById(R.id.responseView);
         //emailText = (EditText) findViewById(R.id.emailText);
@@ -71,17 +74,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*
+
 
         ImageButton jobTraining = (ImageButton) findViewById(R.id.imgBtnJobTraining);
-        summaryButton.setOnClickListener(new View.OnClickListener() {
+        jobTraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ImageView imvDisplay = (ImageView) findViewById(R.id.graph);
                 imvDisplay.setImageDrawable(getResources().getDrawable(R.drawable.orders, getApplicationContext().getTheme()));
             }
         });
-        */
+
 
         new RetrieveFeedTask().execute();
         new RetrieveFeedTask2().execute();
