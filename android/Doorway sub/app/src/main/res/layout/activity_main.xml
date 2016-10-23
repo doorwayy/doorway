@@ -188,6 +188,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/imgBtnFoodStamp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -204,6 +205,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/imgBtnHousing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -211,6 +213,7 @@
                     android:background="@drawable/selectorhousing" />
 
                 <ImageButton
+                    android:id="@+id/imgBtnJobBoard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -218,6 +221,7 @@
                     android:background="@drawable/selectorjobboard" />
 
                 <ImageButton
+                    android:id="@+id/imgBtnJobTraining"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -225,6 +229,7 @@
                     android:background="@drawable/selectorjobtraining" />
 
                 <ImageButton
+                    android:id="@+id/imgBtnNewsFeed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -234,6 +239,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/imgBtnUtility"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -241,6 +247,7 @@
                     android:background="@drawable/selectorutility" />
 
                 <ImageButton
+                    android:id="@+id/imgBtnHealthCare"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
@@ -264,6 +271,8 @@
 
 
         <!-- Data Graph Summary in words-->
+
+
         <TextView
             android:id="@+id/textView1"
             android:layout_width="match_parent"
@@ -277,6 +286,12 @@
             android:padding="10dp"
             android:layout_marginTop="10dp"
             />
+
+
+        <ListView
+            android:id="@+id/list_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
 
         <!-- End Data Graph Summary in words -->
