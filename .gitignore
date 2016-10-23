@@ -55,8 +55,6 @@ warnings.txt
 
 # Ignore public assets
 /public/assets
-/public/*
-/public
 
 # Ignore application configuration
 .env.development
